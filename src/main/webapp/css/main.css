@@ -1,0 +1,59 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Feb 19, 2018, 7:35:05 PM
+    Author     : aphiwit
+*/
+
+@media screen and (max-width: 992px) {
+ .col-xs-6{
+     height: 50px;
+ }
+}
+
+#cardd {
+    
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.card-img-top{
+    width: 100%;
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+#img-upload{
+    width: 100%;
+}
+
+i {
+    font-size: 15px;
+    color:black;
+}
+
+.col-md-6 {
+    padding-left: 40px;
+    padding-right: 40px;
+}

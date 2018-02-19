@@ -55,7 +55,7 @@ public class CreatePostGiverServlet extends HttpServlet {
             createPost.CreatePostGiver();
             
         }
-         getServletContext().getRequestDispatcher("/CreatePostGiver.jsp").forward(request, response);
+         getServletContext().getRequestDispatcher("/detailPost.jsp").forward(request, response);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
