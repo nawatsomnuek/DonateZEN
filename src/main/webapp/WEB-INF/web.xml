@@ -3,10 +3,21 @@
     <servlet>
         <servlet-name>CreatePostGiverServlet</servlet-name>
         <servlet-class>controller.CreatePostGiverServlet</servlet-class>
+        <multipart-config>
+            <location>/Users/nawatsomnuek/untitled folder 2</location>
+        </multipart-config>
+    </servlet>
+    <servlet>
+        <servlet-name>ShowPostGiverServlet</servlet-name>
+        <servlet-class>controller.ShowPostGiverServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>CreatePostGiverServlet</servlet-name>
         <url-pattern>/CreatePostGiver</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ShowPostGiverServlet</servlet-name>
+        <url-pattern>/ShowPostGiver</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
