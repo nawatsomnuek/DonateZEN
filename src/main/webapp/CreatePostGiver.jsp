@@ -13,8 +13,28 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="css/createPostGiver.css" />
     </head>
     <body>
+        <!--4 Main buttons-->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-xs-6 ">
+                    <button type="button" class="btn btn-default btn-block a"><a href="/indexs.html">Home</a></button>
+                </div>
+                <div class="col-md-3 col-xs-6 ">
+                    <button type="button" class="btn btn-default btn-block">Create</button>
+                </div>
+                <div class="col-md-3 col-xs-6">
+                    <button type="button" class="btn btn-default btn-block">Inbox</button>
+                </div>
+                <div class="col-md-3 col-xs-6">
+                    <button type="button" class="btn btn-default btn-block">Profile</button>
+                </div>
+            </div>
+            <br>
+        </div>
+        <!-- nav bar-->
         <nav class="navbar navbar-default ">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -31,10 +51,10 @@
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
                         <li class="active">
-                            <a href="#">ผู้บริจาค</a>
+                            <a href="#">Giver</a>
                         </li>
                         <li>
-                            <a href="#">ผู้รับบริจาค</a>
+                            <a href="#">Reciver</a>
                         </li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
@@ -50,14 +70,15 @@
                 </div>
             </div>
         </nav>
+        <!-- post content-->
         <br>
-        <b><center>สร้างประกาศ</center></b><br>
-        <form enctype="multipart/form-data" action="CreatePostGiver" method="post"> 
+        <b><center>Create</center></b><br>
+        <form enctype="multipart/form-data" action="/CreatePostGiver">
             <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
             <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
             <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
-
+            <!-- Upload picture -->
             <div class="container">
                 <div class="col-md-4 col-xs-4">
                     <div class="form-group">
@@ -65,7 +86,7 @@
                         <div class="input-group">
                             <span class="input-group-btn">
                                 <span class="btn btn-default btn-file">
-                                    Browse… <input type="file" id="imgInp" name="picture">
+                                    Browse… <input type="file" id="imgInp" required>
                                 </span>
                             </span>
                             <input type="text" class="form-control" readonly>
@@ -80,11 +101,11 @@
                         <div class="col-md-10  col-xs-10">
                             <div class="form-row">
                                 <div class="form-group ">
-                                    <label for="inputEmail4">ชื่อสิ่งของ</label>
-                                    <input type="text" class="form-control" id="inputName" name="title" placeholder="Name">
+                                    <label for="inputEmail4">Name</label>
+                                    <input type="text" class="form-control" id="inputName" name="Name" placeholder="Name" required>
                                 </div>
                                 <div class="form-group ">
-                                    <label for="inputPassword4">ประเภท</label>
+                                    <label for="inputPassword4">Category</label>
                                     <br>
                                     <input type="radio" class="" id="inputPassword4" name="category" value="cloth" checked>เครื่องแต่งกาย<br>
                                     <input type="radio" class="" id="inputPassword4" name="category" value="education">การศึกษา<br>
@@ -92,123 +113,108 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="inputAddress">รายละเอียดสิ่งของ</label>
+                                <label for="inputAddress">detail</label>
 
-                                <textarea  rows="4" cols="50" class="form-control" id="inputAddress" name="detail" placeholder="deail more"></textarea>
+                                <textarea  rows="4" cols="50" class="form-control" id="inputAddress" name="detail" placeholder="deail more" required></textarea>
                             </div>
 
                             <div class="form-row">
                                 <div class="form-group col-md-6">
-                                    <label for="inputCity">เบอร์โทรศัพท์</label>
-                                    <input type="text" class="form-control" id="inputCity" name="tel" placeholder="08x-xxx-xxxx">
+                                    <label for="inputCity">tel</label>
+                                    <input type="text" class="form-control" id="inputCity" name="tel" placeholder="08x-xxx-xxxx" required>
                                 </div>
                                 <br>
                                 <br>
                                 <br>
                                 <div class="form-group ">
-                                    <br>สถานที่รับบริจาค
+                                    <br>place
                                     <br>
-                                    <label for="inputState">จังหวัด</label>
-                                    <select id="inputState" name="province"class="form-control">
-                                        <option value="" selected>--------- เลือกจังหวัด ---------</option>
-                                        <option value="กรุงเทพมหานคร">กรุงเทพมหานคร</option>
-                                        <option value="กระบี่">กระบี่ </option>
-                                        <option value="กาญจนบุรี">กาญจนบุรี </option>
-                                        <option value="กาฬสินธุ์">กาฬสินธุ์ </option>
-                                        <option value="กำแพงเพชร">กำแพงเพชร </option>
-                                        <option value="ขอนแก่น">ขอนแก่น</option>
-                                        <option value="จันทบุรี">จันทบุรี</option>
-                                        <option value="ฉะเชิงเทรา">ฉะเชิงเทรา </option>
-                                        <option value="ชัยนาท">ชัยนาท </option>
-                                        <option value="ชัยภูมิ">ชัยภูมิ </option>
-                                        <option value="ชุมพร">ชุมพร </option>
-                                        <option value="ชลบุรี">ชลบุรี </option>
-                                        <option value="เชียงใหม่">เชียงใหม่ </option>
-                                        <option value="เชียงราย">เชียงราย </option>
-                                        <option value="ตรัง">ตรัง </option>
-                                        <option value="ตราด">ตราด </option>
-                                        <option value="ตาก">ตาก </option>
-                                        <option value="นครนายก">นครนายก </option>
-                                        <option value="นครปฐม">นครปฐม </option>
-                                        <option value="นครพนม">นครพนม </option>
-                                        <option value="นครราชสีมา">นครราชสีมา </option>
-                                        <option value="นครศรีธรรมราช">นครศรีธรรมราช </option>
-                                        <option value="นครสวรรค์">นครสวรรค์ </option>
-                                        <option value="นราธิวาส">นราธิวาส </option>
-                                        <option value="น่าน">น่าน </option>
-                                        <option value="นนทบุรี">นนทบุรี </option>
-                                        <option value="บึงกาฬ">บึงกาฬ</option>
-                                        <option value="บุรีรัมย์">บุรีรัมย์</option>
-                                        <option value="ประจวบคีรีขันธ์">ประจวบคีรีขันธ์ </option>
-                                        <option value="ปทุมธานี">ปทุมธานี </option>
-                                        <option value="ปราจีนบุรี">ปราจีนบุรี </option>
-                                        <option value="ปัตตานี">ปัตตานี </option>
-                                        <option value="พะเยา">พะเยา </option>
-                                        <option value="พระนครศรีอยุธยา">พระนครศรีอยุธยา </option>
-                                        <option value="พังงา">พังงา </option>
-                                        <option value="พิจิตร">พิจิตร </option>
-                                        <option value="พิษณุโลก">พิษณุโลก </option>
-                                        <option value="เพชรบุรี">เพชรบุรี </option>
-                                        <option value="เพชรบูรณ์">เพชรบูรณ์ </option>
-                                        <option value="แพร่">แพร่ </option>
-                                        <option value="พัทลุง">พัทลุง </option>
-                                        <option value="ภูเก็ต">ภูเก็ต </option>
-                                        <option value="มหาสารคาม">มหาสารคาม </option>
-                                        <option value="มุกดาหาร">มุกดาหาร </option>
-                                        <option value="แม่ฮ่องสอน">แม่ฮ่องสอน </option>
-                                        <option value="ยโสธร">ยโสธร </option>
-                                        <option value="ยะลา">ยะลา </option>
-                                        <option value="ร้อยเอ็ด">ร้อยเอ็ด </option>
-                                        <option value="ระนอง">ระนอง </option>
-                                        <option value="ระยอง">ระยอง </option>
-                                        <option value="ราชบุรี">ราชบุรี</option>
-                                        <option value="ลพบุรี">ลพบุรี </option>
-                                        <option value="ลำปาง">ลำปาง </option>
-                                        <option value="ลำพูน">ลำพูน </option>
-                                        <option value="เลย">เลย </option>
-                                        <option value="ศรีสะเกษ">ศรีสะเกษ</option>
-                                        <option value="สกลนคร">สกลนคร</option>
-                                        <option value="สงขลา">สงขลา </option>
-                                        <option value="สมุทรสาคร">สมุทรสาคร </option>
-                                        <option value="สมุทรปราการ">สมุทรปราการ </option>
-                                        <option value="สมุทรสงคราม">สมุทรสงคราม </option>
-                                        <option value="สระแก้ว">สระแก้ว </option>
-                                        <option value="สระบุรี">สระบุรี </option>
-                                        <option value="สิงห์บุรี">สิงห์บุรี </option>
-                                        <option value="สุโขทัย">สุโขทัย </option>
-                                        <option value="สุพรรณบุรี">สุพรรณบุรี </option>
-                                        <option value="สุราษฎร์ธานี">สุราษฎร์ธานี </option>
-                                        <option value="สุรินทร์">สุรินทร์ </option>
-                                        <option value="สตูล">สตูล </option>
-                                        <option value="หนองคาย">หนองคาย </option>
-                                        <option value="หนองบัวลำภู">หนองบัวลำภู </option>
-                                        <option value="อำนาจเจริญ">อำนาจเจริญ </option>
-                                        <option value="อุดรธานี">อุดรธานี </option>
-                                        <option value="อุตรดิตถ์">อุตรดิตถ์ </option>
-                                        <option value="อุทัยธานี">อุทัยธานี </option>
-                                        <option value="อุบลราชธานี">อุบลราชธานี</option>
-                                        <option value="อ่างทอง">อ่างทอง </option>
-                                        <option value="อื่นๆ">อื่นๆ</option>
+                                    <label for="inputState">Province</label>
+                                    <select id="inputState" name="province"class="form-control" required>
+                                        <option value="" selected>--------- choose Province ---------</option>
+                                        <option value="Bangkok"> Bangkok</option>
+                                        <option value="krabi">krabi </option>
+                                        <option value="Kanchanaburi">Kanchanaburi </option>
+                                        <option value="Kalasin">Kalasin </option>
+                                        <option value="Kampaeng Phet">Kampaeng Phet</option>
+                                        <option value="Khon Kaen">Khon Kaen</option>
+                                        <option value="Chanthaburi">Chanthaburi</option>
+                                        <option value="Chachoengsao">Chachoengsao </option>
+                                        <option value="Chai Nat">Chai Nat </option>
+                                        <option value="Chaiyaphum">Chaiyaphum </option>
+                                        <option value="Chumphon">Chumphon </option>
+                                        <option value="Chanthaburi">Chanthaburi </option>
+                                        <option value="Chiang Mai">Chiang Mai </option>
+                                        <option value="Chiang Rai">Chiang Rai </option>
+                                        <option value="Trang">Trang </option>
+                                        <option value="Trat ">Trat </option>
+                                        <option value="Tak">Tak </option>
+                                        <option value="Nakhon Nayok">Nakhon Nayok</option>
+                                        <option value="Nakhon Pathom">Nakhon Pathom </option>
+                                        <option value="Nakhon Phanom">Nakhon Phanom </option>
+                                        <option value="Nakhon Ratchasima">Nakhon Ratchasima </option>
+                                        <option value="Nakhon Si Thammarat">Nakhon Si Thammarat </option>
+                                        <option value="Nakhon Sawan">Nakhon Sawan </option>
+                                        <option value="Narathiwat ">Narathiwat </option>
+                                        <option value="Nan">Nan </option>
+                                        <option value="Nonthaburi">Nonthaburi </option>
+                                        <option value="Bueng Kan">Bueng Kan</option>
+                                        <option value="Buriram">Buriram</option>
+                                        <option value="Prachuap Khiri Khan">Prachuap Khiri Khan </option>
+                                        <option value="Pathum Thani">Pathum Thani</option>
+                                        <option value="PrachinBuri">PrachinBuri </option>
+                                        <option value="Pattani">Pattani </option>
+                                        <option value="Phayao "> Phayao </option>
+                                        <option value="Ayutthaya">Ayutthaya </option>
+                                        <option value="Phang Nga">Phang Nga </option>
+                                        <option value="Phichit">Phichit </option>
+                                        <option value="Phitsanulok">Phitsanulok </option>
+                                        <option value="Phetchaburi">Phetchaburi </option>
+                                        <option value="Phetchabun">Phetchabun </option>
+                                        <option value="Phrae">Phrae </option>
+                                        <option value="Phatthalung ">Phatthalung </option>
+                                        <option value="Phuket">Phuket </option>
+                                        <option value="Maha Sarakham">Maha Sarakham </option>
+                                        <option value="Mukdahan">Mukdahan </option>
+                                        <option value="Mae Hong Son">Mae Hong Son</option>
+                                        <option value="Yasothon">Yasothon</option>
+                                        <option value="Yala">Yala</option>
+                                        <option value="Roi Et">Roi Et </option>
+                                        <option value="Ranong">Ranong </option>
+                                        <option value="Rayong">Rayong </option>
+                                        <option value="Ratchaburi">Ratchaburi</option>
+                                        <option value="Lopburi">Lopburi </option>
+                                        <option value="Lamphan">Lamphan</option>
+                                        <option value="Lamphun">Lamphun </option>
+                                        <option value="loei">loei </option>
+                                        <option value="Sisaket">Sisaket</option>
+                                        <option value="Sakon Nakhon">Sakon Nakhon</option>
+                                        <option value="Songkhla">Songkhla </option>
+                                        <option value="Samut Sakhon">Samut Sakhon </option>
+                                        <option value="Samut Prakan">Samut Prakan </option>
+                                        <option value="Samut Songkhram">Samut Songkhram </option>
+                                        <option value="สSa Kaew">Sa Kaew </option>
+                                        <option value="Saraburi">Saraburi</option>
+                                        <option value="Sing Buri">Sing Buri</option>
+                                        <option value="Sukhothai">Sukhothai </option>
+                                        <option value="Suphan Buri">Suphan Buri </option>
+                                        <option value="Surat Thani ">Surat Thani </option>
+                                        <option value="Surin">Surin </option>
+                                        <option value="Satun">Satun </option>
+                                        <option value="Nong khai">Nong khai </option>
+                                        <option value="Nong BuaLamphu">Nong BuaLamphu </option>
+                                        <option value="Nong BuaLamphu">Amnat Charoen </option>
+                                        <option value="Udon Thani">Udon Thani </option>
+                                        <option value="Uttaradit">Uttaradit</option>
+                                        <option value="Uthai Thani">Uthai Thani</option>
+                                        <option value="Ubon Ratchathani">Ubon Ratchathani</option>
+                                        <option value="Ang Thong">Ang Thong</option>
+                                        <option value="other">other</option>
                                     </select>
                                 </div>
-                                <!--<div class="form-group ">
-                                 <label for="inputState">อำเภอ</label>
-                                 <select id="inputState" name="district" class="form-control">
-                                   <option selected>Choose...</option>
-                                   <option>สามพราน</option>
-                                 </select>
-                               </div>
-                                <div class="form-group ">
-                                 <label for="inputState">ตำบล</label>
-                                 <select id="inputState" name="subdistrict" class="form-control">
-                                   <option selected>Choose...</option>
-                                   <option>อ้อมใหญ่</option>
-                                 </select>
-                               </div>-->
                                 <br> 
-                                <center><button type="submit" class="btn btn-primary">บันทึก</button>
-                                    <button type="submit" class="btn btn-primary">ยกเลิก</button></center>
-
+                                <center><button type="submit" class="btn btn-primary">save</button>
+                                    <button type="submit" class="btn btn-primary">cancel</button></center>
                                 </form>
                             </div>
                         </div>
