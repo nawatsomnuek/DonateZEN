@@ -93,20 +93,18 @@
             <!--Detail port-->
             <div class="col-md-6 col-sm-6">
                 <div class="row">
-                    <h4 class="card-title">รองเท้ากีฬาผู้ชาย ขนาด 32 </h4>
+                    <h4 class="card-title"><%=request.getAttribute("title")%></h4>
                 </div>
                 <div class="row">
-                    <!--<i>ประเภท :</i>  <div>เครื่องแต่งกาย</div>-->
                     <p>
                         <i>ประเภท : </i>
-                        <span> เครื่องแต่งกาย ${tag}</span>
+                        <span> <%=request.getAttribute("cate")%> </span>
                     </p>
                 </div>
                 <div class="row">
                     <div>
                         <p>
-                            <i>รายละเอียด : </i>รองเท้าใช้แล้วอายุ 8 เดือน สภาพ 98% ไม่ค่อยได้ใช้ อยากจะให้คนที่ต้องการใช้จริงๆ
-                            ตำหนิ มีขาดที่เชือก เพราะ โดนหมาที่บ้านกัดแต่โดยรวมใช้งานไม่มีปัญหาอะไร สนใจติดต่อมาที่นี่นะคะ
+                            <i>รายละเอียด : </i> <%=request.getAttribute("detail")%>
                             </p>
                     </div>
                 </div>
@@ -121,7 +119,7 @@
                     <!--<i>ประเภท :</i>  <div>เครื่องแต่งกาย</div>-->
                     <p>
                         <i>สถานที่รับบริจาค : </i>
-                        <span> จังหวัด${tag}</span>
+                        <span> <%=request.getAttribute("province")%> </span>
                     </p>
                 </div>
             </div>
