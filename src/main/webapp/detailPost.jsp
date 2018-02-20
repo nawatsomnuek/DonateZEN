@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
 <%@ page contentType="text/html;charset=UTF-8" language="java"%>
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,10 +29,10 @@
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
                 <li class="active">
-                    <a href="#">ผู้บริจาค</a>
+                    <a href="#">Giver</a>
                 </li>
                 <li>
-                    <a href="#">ผู้รับบริจาค</a>
+                    <a href="#">Receiver</a>
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -57,22 +58,22 @@
 
     <!--4 Main buttons-->
     <div class="container">
-        <div class="row">
-            <div class="col-md-3 col-xs-6 ">
-                <button type="button" class="btn btn-default btn-block a"><a href="/indexs.html">หน้าแรก</a></button>
+            <div class="row">
+              <div class="col-md-3 col-xs-6 ">
+                    <a href="index.jsp"> <button type="button" class="btn btn-default btn-block a">Home</button></a>
+              </div>
+              <div class="col-md-3 col-xs-6 ">
+                 <a href="CreatePostGiver.jsp"><button type="button" class="btn btn-default btn-block">
+                         Create Post</button></a></div>
+              <div class="col-md-3 col-xs-6">
+                <button type="button" class="btn btn-default btn-block">Mesages</button>
+              </div>
+              <div class="col-md-3 col-xs-6">
+                <button type="button" class="btn btn-default btn-block">My Profile</button>
+              </div>
             </div>
-            <div class="col-md-3 col-xs-6 ">
-                <button type="button" class="btn btn-default btn-block">สร้างประกาศ</button>
-            </div>
-            <div class="col-md-3 col-xs-6">
-                <button type="button" class="btn btn-default btn-block">ข้อความ</button>
-            </div>
-            <div class="col-md-3 col-xs-6">
-                <button type="button" class="btn btn-default btn-block">ประวัติส่วนตัว</button>
-            </div>
-        </div>
-        <br>
-    </div>
+            <br>
+          </div>
     <!--End of 4 main buttons-->
 
 
@@ -85,7 +86,7 @@
                 <p>
                     <img class="card-img-top" src="/img/pexels-photo.jpg " alt="Image cant show">
                 </p>
-                <a href="#" class="btn btn-primary btn-block">แก้ไขภาพ</a>
+                <a href="#" class="btn btn-primary btn-block">Edit Picture</a>
                 <br>
             </div>
             <!--End of Img -->
@@ -96,30 +97,31 @@
                     <h4 class="card-title"><%=request.getAttribute("title")%></h4>
                 </div>
                 <div class="row">
+                    <!--<i>ประเภท :</i>  <div>เครื่องแต่งกาย</div>-->
                     <p>
-                        <i>ประเภท : </i>
-                        <span> <%=request.getAttribute("cate")%> </span>
+                        <i>Type : </i>
+                        <span><%=request.getAttribute("cate")%></span>
                     </p>
                 </div>
                 <div class="row">
                     <div>
                         <p>
-                            <i>รายละเอียด : </i> <%=request.getAttribute("detail")%>
+                            <i>Detail : </i> <%=request.getAttribute("detail")%>
                             </p>
                     </div>
                 </div>
                 <div class="row">
                     <!--<i>ประเภท :</i>  <div>เครื่องแต่งกาย</div>-->
                     <p>
-                        <i>เบอร์โทรศัพท์ : </i>
+                        <i>Tel : </i>
                         <span> 094-xxxxxxx${tag}</span>
                     </p>
                 </div>
                 <div class="row">
                     <!--<i>ประเภท :</i>  <div>เครื่องแต่งกาย</div>-->
                     <p>
-                        <i>สถานที่รับบริจาค : </i>
-                        <span> <%=request.getAttribute("province")%> </span>
+                        <i>Place : </i>
+                        <span><%=request.getAttribute("province")%> </span>
                     </p>
                 </div>
             </div>
@@ -127,8 +129,8 @@
 
             <!--Status of detail port-->
             <div class="col-md-3 col-sm-3">
-                <div class="btn btn-success">
-                        บริจาคเรียบร้อยแล้ว
+                <div class="btn btn-danger">
+                        Donation successful
                 </div>
             </div>
 
