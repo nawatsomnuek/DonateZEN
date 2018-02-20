@@ -5,12 +5,15 @@
  */
 package controller;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Part;
 import model.CreatePostGiver;
 
 /**
@@ -33,30 +36,47 @@ public class CreatePostGiverServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         String postG_Title = request.getParameter("title");
         String postG_Detail = request.getParameter("detail");
-        String link_Picture = request.getParameter("picture");
         String province = request.getParameter("province");
-        String district = request.getParameter("district");
-        String subdistrict = request.getParameter("subdistrict");
-        String member_mem_ID = request.getParameter("member_mem_ID");
-        String postGiveStatus_postGSta_ID = request.getParameter("postGiveStatus_postGSta_ID");
-        String selectCate_Giver = request.getParameter("selectCate_Giver");
-        
-        if(postG_Title !=null ){
+        String member_mem_ID = "MEM00001";
+        String selectedCate_Giver = request.getParameter("category");
+
+        if (postG_Title != null) {
+
+            Part picturePart = request.getPart("picture");
+            String pictureName = this.getFileName(picturePart);
+            picturePart.write(pictureName);
+            picturePart.delete();
+            Part descriptionPart = request.getPart("title");
+            String description = this.getStringFromPart(descriptionPart);
+
             CreatePostGiver createPost = new CreatePostGiver();
             createPost.setPostG_Title(postG_Title);
             createPost.setPostG_Detail(postG_Detail);
-            createPost.setLink_Picture(link_Picture);
+            createPost.setLink_Picture(pictureName);
             createPost.setProvince(province);
-            createPost.setDistrict(district);
-            createPost.setSubdistrict(subdistrict);
             createPost.setMember_mem_ID(member_mem_ID);
-            createPost.setPostGiveStatus_PostGSta_ID(Integer.parseInt(postGiveStatus_postGSta_ID));
-            createPost.setSelectedCate_Giver(selectCate_Giver);
+            createPost.setPostGiveStatus_PostGSta_ID(1);
+            createPost.setSelectedCate_Giver(selectedCate_Giver);
             createPost.CreatePostGiver();
-            
+
         }
-         getServletContext().getRequestDispatcher("/detailPost.jsp").forward(request, response);
+        getServletContext().getRequestDispatcher("/detailPost.jsp").forward(request, response);
     }
+
+    private String getStringFromPart(Part part) throws IOException {
+        BufferedReader r = new BufferedReader(new InputStreamReader(part.getInputStream()));
+        return r.readLine();
+    } // end of getStringFromPart()
+
+    private String getFileName(Part part) {
+        for (String cd : part.getHeader("content-disposition").split(";")) {
+            if (cd.trim().startsWith("filename")) {
+                return cd.substring(cd.indexOf('=') + 1).trim()
+                        .replace("\"", "");
+            }
+        }
+        return null;
+    } // end of getFileName()
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
