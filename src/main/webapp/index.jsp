@@ -23,7 +23,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand " href="#">DonateZEN</a>
+      <a class="navbar-brand " href="">DonateZEN</a>
     </div>
 
     <div class="collapse navbar-collapse" id="myNavbar">
@@ -153,7 +153,7 @@
         <button type="button" class="btn btn-default btn-block a">หน้าแรก</button>
       </div>
       <div class="col-md-3 col-xs-6 ">
-         <a href="/detailPost.html" ><button type="button" class="btn btn-default btn-block">
+         <a href="CreatePostGiver.jsp" ><button type="button" class="btn btn-default btn-block">
                  สร้างประกาศ</button></a></div>
       <div class="col-md-3 col-xs-6">
         <button type="button" class="btn btn-default btn-block">ข้อความ</button>
