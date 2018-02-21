@@ -76,15 +76,16 @@
         <!-- post content-->
         <br>
         <b><center>Create</center></b><br>
-        <form enctype="multipart/form-data" action="CreatePostGiver" method="post">
+        <!--<form enctype="multipart/form-data" action="CreatePostGiver" method="post">-->
+            <form action="CreatePostGiver" method="post">
             <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
             <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
             <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
             <!-- Upload picture -->
             <div class="container">
-                <div class="col-md-4 col-xs-4">
-                    <div class="form-group">
+                <div class="col-md-2 col-xs-2">
+<!--                    <div class="form-group">
                         <label>Upload Image</label>
                         <div class="input-group">
                             <span class="input-group-btn">
@@ -97,7 +98,7 @@
                         <br>
                         <br>
                         <img id='img-upload'/>
-                    </div>
+                    </div>-->
                 </div>
                 <div class="col-md-8  col-xs-8">
                     <form>
@@ -124,10 +125,10 @@
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label for="inputCity">tel</label>
-                                    <input type="text" class="form-control" id="inputCity" name="tel" placeholder="08x-xxx-xxxx" required>
+                                    <input type="number" class="form-control" id="inputCity" name="tel" placeholder="08x-xxx-xxxx" minlength="9" maxlength="10" required>
                                 </div>
                                 <br>
-                                <br>
+                                 <br>
                                 <br>
                                 <div class="form-group ">
                                     <br>place
