@@ -7,6 +7,7 @@ package controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -34,14 +35,11 @@ public class ShowPostGiverServlet extends HttpServlet {
         
         String memId = "PGR00006";
         
-        PostGiver post = new PostGiver();
-        request.setAttribute("title", post.showPostGiver().getPostG_Title());
-        request.setAttribute("detail", post.showPostGiver().getPostG_Detail());        
-        request.setAttribute("province", post.showPostGiver().getProvince());
-        request.setAttribute("cate", post.showPostGiver().getSelectedCate_Giver());
-        request.setAttribute("picture", post.showPostGiver().getLink_Picture());
-        System.out.println("postttttt: " + post.showPostGiver().getPostG_Title());
-        getServletContext().getRequestDispatcher("/detailPostGiver.jsp").forward(request, response);
+        List<PostGiver> post = PostGiver.showPostGiver();
+        request.setAttribute("post", post);
+          
+ 
+        getServletContext().getRequestDispatcher("/detailPost.jsp").forward(request, response);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
