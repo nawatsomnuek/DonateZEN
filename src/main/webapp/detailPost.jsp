@@ -141,7 +141,7 @@ Edit Post
                 <div class="col-md-8">
                     <div>
                         <h4 class="card-title">
-                            Shoes
+                            <%=request.getAttribute("postG_Title")%>
                         </h4>
                     </div>
 
