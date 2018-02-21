@@ -4,7 +4,7 @@
         <servlet-name>CreatePostGiverServlet</servlet-name>
         <servlet-class>controller.CreatePostGiverServlet</servlet-class>
         <multipart-config>
-            <location>/Users/nawatsomnuek/untitled folder 2</location>
+            <location>/Users/nawatsomnuek/Desktop/untitled folder 2</location>
         </multipart-config>
     </servlet>
     <servlet>
