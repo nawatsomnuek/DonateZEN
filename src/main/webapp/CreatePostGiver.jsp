@@ -43,11 +43,11 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li>
                             <a href="#">
-                                <span class="glyphicon glyphicon-user"></span> Sign Up</a>
+                                <span class="glyphicon glyphicon-user"></span> Aphiwit</a>
                         </li>
                         <li>
                             <a href="#">
-                                <span class="glyphicon glyphicon-log-in"></span> Login</a>
+                                <span class="glyphicon glyphicon-log-in"></span> Logout</a>
                         </li>
                     </ul>
                 </div>
@@ -111,7 +111,7 @@
                                 <div class="form-group ">
                                     <label for="inputPassword4">Category</label>
                                     <br>
-                                    <input type="radio" class="" id="inputPassword4" name="category" value="cloth" checked> Clothes<br>
+                                    <input type="radio" class="" id="inputPassword4" name="category" value="cloth"> Clothes<br>
                                     <input type="radio" class="" id="inputPassword4" name="category" value="education"> Education<br>
                                     <input type="radio" class="" id="inputPassword4" name="category" value="object"> Other<br>
                                 </div>
