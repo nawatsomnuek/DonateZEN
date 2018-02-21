@@ -80,107 +80,112 @@
 
                 <!--Detail post-->
 
-              
+
+                <!-- <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-6">
+                            <div class="row">
+                                <h4 class="card-title">
+                                    <%=request.getAttribute("postG_Title")%>
+                                </h4>
+                            </div>
+                            <div class="row">
+                                <p>
+                                    <i>Category : </i>
+                                    <span>
+                                        <%=request.getAttribute("selectedCate_Giver")%>
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="row">
+                                <div>
+                                    <p>
+                                        <i>Detail : </i>
+                                        <%=request.getAttribute("postG_Detail")%>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <p>
+                                    <i>Tlelphone Number : </i>
+                                    <span>
+                                        <%=request.getAttribute("tel")%>
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="row">
+                                <p>
+                                    <i>Place : </i>
+                                    <span>
+                                        <%=request.getAttribute("province")%>
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6">
+                            <div class="btn btn-success  btn-block">
+                                Donation successful
+                            </div>
+
+                            <div class="btn btn-primary  btn-block">
+                                Edit Post
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+
                 <div class="container">
                     <div class="row">
-                          <!--Img -->
-                        <!--End of Img -->
 
-                        <!--Detail port-->
-                      
-                            <!--                    <div class="row">
-                        <h4 class="card-title"><%=request.getAttribute("title")%></h4>
-                    </div>-->
-                            <div class="row">
-                                <!--<i>ประเภท :</i>  <div>เครื่องแต่งกาย</div>-->
-
-                                <!--                    <a href="#" class="btn btn-primary btn-block">แก้ไขภาพ</a>-->
-                                <br>
+                        <div class="col-md-8">
+                            <div>
+                                <h4 class="card-title">
+                                    Shoes
+                                </h4>
                             </div>
-                            <!--End of Img -->
 
-                            <!--Detail port-->
-                            <div class="col-md-6 col-sm-6">
-                                <div class="row">
-                                    <h4 class="card-title">
-                                        <%=request.getAttribute("postG_Title")%>
-                                    </h4>
-                                </div>
-                                <div class="row">
-                                    <p>
-                                        <i>Category : </i>
-                                        <span>
-                                            <%=request.getAttribute("selectedCate_Giver")%>
-                                        </span>
-                                    </p>
-                                </div>
-                                <div class="row">
-                                    <div>
-                                        <p>
-                                            <i>Detail : </i>
-                                            <%=request.getAttribute("postG_Detail")%>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <!--<i>ประเภท :</i>  <div>เครื่องแต่งกาย</div>-->
-                                    <p>
-                                        <i>Tlelphone Number : </i>
-                                        <span>
-                                            <%=request.getAttribute("tel")%>
-                                        </span>
-                                    </p>
-                                </div>
-                                <div class="row">
-                                    <!--<i>ประเภท :</i>  <div>เครื่องแต่งกาย</div>-->
-                                    <p>
-                                        <i>Place : </i>
-                                        <span>
-                                            <%=request.getAttribute("province")%>
-                                        </span>
-                                    </p>
-                                </div>
-                            </div>
-                            <!--End of detail port-->
+                            <p>
+                                <i>Category : </i>
+                                <span>
+                                    <%=request.getAttribute("selectedCate_Giver")%>
+                                </span>
+                            </p>
 
-                            <!--Status of detail port-->
-                            <!--                    <div class="col-md-3 col-sm-3">
-                        <div class="btn btn-success">
-                            บริจาคเรียบร้อยแล้ว
-                        </div>
-                        -->
-                            <div class="row">
+                            <p>
+                                <i>Detail : </i>
+                                <%=request.getAttribute("postG_Detail")%>
+                            </p>
 
-                            </div>
-                            <div class="row">
-                                <!--<i>ประเภท :</i>  <div>เครื่องแต่งกาย</div>-->
-                                <!--                            <p>
+                            <p>
+                                <i>Telphone Number : </i>
+                                <span>
+                                    <%=request.getAttribute("tel")%>
+                                </span>
+                            </p>
+
+                            <p>
                                 <i>Place : </i>
-                                <span><%=request.getAttribute("province")%> </span>
-                            </p>-->
-                            </div>
+                                <span>
+                                    <%=request.getAttribute("province")%>
+                                </span>
+                            </p>
+
                         </div>
-                        <!--End of detail port-->
-
-                        <!--Status of detail port-->
-                             <div class="col-md-6 col-sm-6">
-                <div class="text">
-                    Donation successful
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-
-                    </div>
-                    <div class="col-md-4 ">
-                        <div class="btn btn-primary btn-block ">
-                            Edit Post
+                        <div class="col-md-4">
+                                <div class="btn btn-success  btn-block">
+                                        Donation successful
+                                    </div>
+        
+                                    <div class="btn btn-primary  btn-block">
+                                        Edit Post
+                                    </div>
                         </div>
                     </div>
 
                 </div>
 
-            </div>
-                    </div>
+
 
             </body>
 

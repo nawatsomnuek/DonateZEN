@@ -1,21 +1,12 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : Feb 19, 2018, 7:35:05 PM
-    Author     : aphiwit
-*/
-
 @media screen and (max-width: 992px) {
  .col-xs-6{
      height: 50px;
+     text-align: center;
  }
 }
 
 #cardd {
-    
+    border: ;
     padding: 15px;
     margin-bottom: 15px;
 }
@@ -53,10 +44,7 @@ i {
     color:black;
 }
 
-.col-md-6 {
-    padding-left: 40px;
-    padding-right: 40px;
-}
-.text{
-    color: red;
+.col-md-8 {
+  padding: 30px;
+   
 }
