@@ -16,24 +16,7 @@
         <link rel="stylesheet" href="css/createPostGiver.css" />
     </head>
     <body>
-        <!--4 Main buttons-->
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 col-xs-6 ">
-                    <button type="button" class="btn btn-default btn-block a"><a href="/indexs.html">Home</a></button>
-                </div>
-                <div class="col-md-3 col-xs-6 ">
-                    <button type="button" class="btn btn-default btn-block">Create</button>
-                </div>
-                <div class="col-md-3 col-xs-6">
-                    <button type="button" class="btn btn-default btn-block">Inbox</button>
-                </div>
-                <div class="col-md-3 col-xs-6">
-                    <button type="button" class="btn btn-default btn-block">Profile</button>
-                </div>
-            </div>
-            <br>
-        </div>
+
         <!-- nav bar-->
         <nav class="navbar navbar-default ">
             <div class="container-fluid">
@@ -70,6 +53,26 @@
                 </div>
             </div>
         </nav>
+        
+        <!--4 Main buttons-->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-xs-6 ">
+                    <a href="index.jsp"><button type="button" class="btn btn-default btn-block a">Home</button></a>
+                </div>
+                <div class="col-md-3 col-xs-6 ">
+                    <a href="CreatePostGiver.jsp" ><button type="button" class="btn btn-default btn-block">Create</button></a>
+                </div>
+                <div class="col-md-3 col-xs-6">
+                    <button type="button" class="btn btn-default btn-block">Inbox</button>
+                </div>
+                <div class="col-md-3 col-xs-6">
+                    <button type="button" class="btn btn-default btn-block">Profile</button>
+                </div>
+            </div>
+            <br>
+        </div>
+                
         <!-- post content-->
         <br>
         <b><center>Create</center></b><br>
@@ -107,9 +110,9 @@
                                 <div class="form-group ">
                                     <label for="inputPassword4">Category</label>
                                     <br>
-                                    <input type="radio" class="" id="inputPassword4" name="category" value="cloth" checked>เครื่องแต่งกาย<br>
-                                    <input type="radio" class="" id="inputPassword4" name="category" value="education">การศึกษา<br>
-                                    <input type="radio" class="" id="inputPassword4" name="category" value="object">ของใช้ทั่วไป<br>
+                                    <input type="radio" class="" id="inputPassword4" name="category" value="cloth" checked> Clothes<br>
+                                    <input type="radio" class="" id="inputPassword4" name="category" value="education"> Education<br>
+                                    <input type="radio" class="" id="inputPassword4" name="category" value="object"> Other<br>
                                 </div>
                             </div>
                             <div class="form-group">
