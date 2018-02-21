@@ -31,7 +31,7 @@ public class CreatePostGiver {
     String SelectedCate_Giver;
 
     public void CreatePostGiver(){
-        final String SQL_INSERT_POSTGIVE = "INSERT INTO PostGive(postG_Title, postG_Detail, postG_Date, link_Picture, province, Selected_Category, Member_mem_ID, PostGiveStatus_PostGSta_ID, postG_ID) VALUES (?,?,?,?,?,?,?,?,?)";
+        final String SQL_INSERT_POSTGIVE = "INSERT INTO PostGive(postG_Title, postG_Detail, postG_Date, link_Picture, province, Selected_Category, Member_mem_ID, PostGiveStatus_PostGSta_ID, postG_ID, subdistrict) VALUES (?,?,?,?,?,?,?,?,?,?)";
         Connection conn = ConnectionBuilder.getConnection();
         try {            
             java.util.Date date = new java.util.Date();
@@ -45,6 +45,7 @@ public class CreatePostGiver {
             pstm.setString(7, this.getMember_mem_ID());
             pstm.setInt(8, this.getPostGiveStatus_PostGSta_ID());
             pstm.setString(9, "akhdfbka");
+            pstm.setString(10, this.getSubdistrict());
             
             pstm.executeUpdate();
             pstm.close();
