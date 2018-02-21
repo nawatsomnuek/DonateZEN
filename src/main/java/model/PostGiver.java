@@ -9,6 +9,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.logging.Level;
@@ -33,22 +34,31 @@ public class PostGiver {
 
     public PostGiver() {
     }
+
+    private PostGiver(ResultSet rs) throws SQLException {
+        this.postG_Title = rs.getString("postG_Title");
+        this.postG_Detail = rs.getString("postG_Detail");
+        this.province = rs.getString("province");
+        this.SelectedCate_Giver = rs.getString("Selected_Category");
+        this.link_Picture = rs.getString("link_Picture");
+    }
     
-    public PostGiver showPostGiver(){
-        PostGiver post = null;
+    public static List<PostGiver> showPostGiver(){
+        List<PostGiver> post = null;
+        PostGiver p = null;
         
-        final String SELECT_POST = "SELECT * FROM PostGive WHERE postG_ID = 'PGR00006'";
+        final String SELECT_POST = "SELECT * FROM PostGive WHERE postG_ID = 'PGR00012'";
         Connection con = ConnectionBuilder.getConnection();
         
         try {
             PreparedStatement pstm = con.prepareStatement(SELECT_POST);
             ResultSet rs = pstm.executeQuery();
-            if(rs.next()){
-                post.setPostG_Title(rs.getString("postG_Title"));
-                post.setPostG_Detail(rs.getString("postG_Detail"));
-                post.setProvince(rs.getString("province"));
-                post.setSelectedCate_Giver(rs.getString("Selected_Category"));
-                post.setLink_Picture(rs.getString("link_Picture"));
+            while(rs.next()){
+                p = new PostGiver(rs);
+                if (post == null) {
+                    post = new ArrayList();
+                }
+                post.add(p);
             }
             rs.close();
             pstm.close();
