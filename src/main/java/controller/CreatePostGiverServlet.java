@@ -13,6 +13,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.servlet.http.Part;
 import model.CreatePostGiver;
 
@@ -41,7 +42,8 @@ public class CreatePostGiverServlet extends HttpServlet {
         String selectedCate_Giver = request.getParameter("category");
 
         if (postG_Title != null) {
-
+//            HttpSession session = request.getSession();
+            
             Part picturePart = request.getPart("picture");
             String pictureName = this.getFileName(picturePart);
             picturePart.write(pictureName);
@@ -58,7 +60,14 @@ public class CreatePostGiverServlet extends HttpServlet {
             createPost.setPostGiveStatus_PostGSta_ID(1);
             createPost.setSelectedCate_Giver(selectedCate_Giver);
             createPost.CreatePostGiver();
-
+            
+            request.setAttribute("postG_Title", postG_Title);
+            request.setAttribute("postG_Detail", postG_Detail);
+            request.setAttribute("selectedCate_Giver", selectedCate_Giver);
+            request.setAttribute("province", province);
+            
+//            session.setAttribute("user", );
+            getServletContext().getRequestDispatcher("/detailPost.jsp").forward(request, response);
         }
         getServletContext().getRequestDispatcher("/detailPost.jsp").forward(request, response);
     }
