@@ -3,9 +3,9 @@
     <servlet>
         <servlet-name>CreatePostGiverServlet</servlet-name>
         <servlet-class>controller.CreatePostGiverServlet</servlet-class>
-        <multipart-config>
+<!--        <multipart-config>
             <location>/Users/nawatsomnuek/Desktop/untitled folder 2</location>
-        </multipart-config>
+        </multipart-config>-->
     </servlet>
     <servlet>
         <servlet-name>ShowPostGiverServlet</servlet-name>
