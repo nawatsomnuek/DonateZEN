@@ -43,19 +43,11 @@ public class CreatePostGiverServlet extends HttpServlet {
         String member_mem_ID = "MEM00001";
         String selectedCate_Giver = request.getParameter("category");
 
-        if (postG_Title != null) {
-//            HttpSession session = request.getSession();
+        if (postG_Title != null && postG_Detail != null && province!= null && tel != null && member_mem_ID != null && selectedCate_Giver != null) {
 
-//            Part picturePart = request.getPart("picture");
-//            String pictureName = this.getFileName(picturePart);
-//            picturePart.write(pictureName);
-//            picturePart.delete();
-//            Part descriptionPart = request.getPart("title");
-//            String description = this.getStringFromPart(descriptionPart);
             CreatePostGiver createPost = new CreatePostGiver();
             createPost.setPostG_Title(postG_Title);
             createPost.setPostG_Detail(postG_Detail);
-//            createPost.setLink_Picture(pictureName);
             createPost.setProvince(province);
             createPost.setSubdistrict(tel);
             createPost.setMember_mem_ID(member_mem_ID);
@@ -69,26 +61,11 @@ public class CreatePostGiverServlet extends HttpServlet {
             request.setAttribute("selectedCate_Giver", selectedCate_Giver);
             request.setAttribute("province", province);
             System.out.println("testtttttttttt: " + postG_Title);
-//            session.setAttribute("user", );
             getServletContext().getRequestDispatcher("/detailPost.jsp").forward(request, response);
         }
         getServletContext().getRequestDispatcher("/detailPost.jsp").forward(request, response);
     }
 
-//    private String getStringFromPart(Part part) throws IOException {
-//        BufferedReader r = new BufferedReader(new InputStreamReader(part.getInputStream()));
-//        return r.readLine();
-//    } // end of getStringFromPart()
-//
-//    private String getFileName(Part part) {
-//        for (String cd : part.getHeader("content-disposition").split(";")) {
-//            if (cd.trim().startsWith("filename")) {
-//                return cd.substring(cd.indexOf('=') + 1).trim()
-//                        .replace("\"", "");
-//            }
-//        }
-//        return null;
-//    } // end of getFileName()
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
