@@ -38,11 +38,11 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li>
                         <a href="#">
-                            <span class="glyphicon glyphicon-user"></span> Sign Up</a>
+                            <span class="glyphicon glyphicon-user"></span> Aphiwit</a>
                     </li>
                     <li>
                         <a href="#">
-                            <span class="glyphicon glyphicon-log-in"></span> Login</a>
+                            <span class="glyphicon glyphicon-log-in"></span> Logout</a>
                     </li>
                 </ul>
             </div>
@@ -170,11 +170,10 @@
             <div class="row">   
                 <!-- 1 Blog-->
                 <div class="col-md-3 col-sm-6" id="cardd">
-                    <div class="card mb-4">
-                        <img class="card-img-top" src="/img/pexels-photo.jpg" alt="Card image cap">
-                        <div class="card-body">
+                    <div class="card mb-4">                       
+                        <div class="card-body" style="border-style: solid;border-color: lightgrey;padding: 10px">
                             <h2 class="card-title">Shoes</h2>
-                            <p class="card-text"><i>ประเภท : </i>Clothes</p>
+                            <p class="card-text"><i>Category : </i>Clothes</p>
                             <p class="card-text">I want to give my shoes because I never wear it so along time. </p>
                             <p class="card-text"><i>Place : </i>Bangkok</p>
                             <a href="#" class="btn btn-success">See more</a>
@@ -187,7 +186,7 @@
                 </div>
                 <!-- End of 1 Blog-->
 
-                <!-- 1 Blog-->
+<!--                 1 Blog
                 <div class="col-md-3 col-sm-6" id="cardd">
                     <div class="card mb-4">
                         <img class="card-img-top" src="/img/pexels-photo.jpg" alt="Card image cap">
@@ -204,9 +203,9 @@
                         </div>
                     </div>
                 </div>
-                <!-- End of 1 Blog-->
+                 End of 1 Blog
 
-                <!-- 1 Blog-->
+                 1 Blog
                 <div class="col-md-3 col-sm-6" id="cardd">
                     <div class="card mb-4">
                         <img class="card-img-top" src="/img/pexels-photo.jpg" alt="Card image cap">
@@ -223,9 +222,9 @@
                         </div>
                     </div>
                 </div>
-                <!-- End of 1 Blog-->
+                 End of 1 Blog
 
-                <!-- 1 Blog-->
+                 1 Blog
                 <div class="col-md-3 col-sm-6" id="cardd">
                     <div class="card mb-4">
                         <img class="card-img-top" src="/img/pexels-photo.jpg" alt="Card image cap">
@@ -241,7 +240,7 @@
                             <a href="#">Aphiwit</a>
                         </div>
                     </div>
-                </div>
+                </div>-->
                 <!-- End of 1 Blog-->
 
             </div>
