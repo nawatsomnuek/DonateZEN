@@ -37,7 +37,7 @@
                             <a href="#">Giver</a>
                         </li>
                         <li>
-                            <a href="#">Reciver</a>
+                            <a href="#">Receiver</a>
                         </li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
